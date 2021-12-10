@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.discover {
+  &__item {
+    text-align: center;
+    padding: 60px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white-color;
+    h4 {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      line-height: 20px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+    &:first-child {
+      background-image: url(../../../assets/img/parallax-5-filter.jpg);
+      .discover__btn {
+        color: #f3a46b;
+        border-radius: 38px;
+        letter-spacing: 2px;
+      }
+    }
+    &:last-child {
+      background-image: url(../../../assets/img/parallax-6-filter.jpg);
+      .discover__btn {
+        color: #1bbc9b;
+        border-radius: 38px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

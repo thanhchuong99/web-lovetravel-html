@@ -1,0 +1,119 @@
+@use "../abstracts/" as *;
+
+.packages {
+  $berlin-color: #ffd205;
+  $hongkong-color: #f76570;
+  $sanfrancisco-color: #ba71da;
+  padding-top: 60px;
+  padding-bottom: 75px;
+  &__heading {
+    text-align: center;
+    letter-spacing: 2px;
+    color: $txt-color;
+    font-size: 1.4rem;
+  }
+  &__sub-heading {
+    text-align: center;
+    color: #555;
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    span {
+      z-index: 1;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        border-top: 5px solid #1bbc9b;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__item-wrapper {
+    padding: 30px;
+  }
+  &__item {
+    h4.packages__item-heading {
+      color: #555;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    h3.packages__item-heading {
+      color: $txt-color;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      line-height: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 37px;
+      margin-top: 6px;
+      img {
+        margin-right: 8px;
+        width: 14px;
+      }
+    }
+    &-group {
+      box-shadow: $shadow;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  &-group {
+    @include flex(null, space-between);
+    margin-bottom: 40px;
+    &__cate {
+      color: #555555;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      &:first-child {
+        margin-bottom: 7px;
+      }
+      span {
+        font-size: 1rem;
+        background-color: $berlin-color;
+        border-radius: 30px;
+        padding: 1px 8px;
+        color: $white-color;
+        margin-left: 10px;
+      }
+    }
+    &__price {
+      color: #555555;
+      font-size: 2.5rem;
+      align-self: flex-end;
+      letter-spacing: 1px;
+      font-weight: 400;
+      span {
+        color: $txt-color;
+        font-size: 2rem;
+        margin-right: 6px;
+        text-decoration: line-through;
+        font-weight: 300;
+      }
+    }
+  }
+  &__text {
+    color: $txt-color;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    line-height: 2.7rem;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    color: $white-color;
+    &--hongkong {
+      background-color: $hongkong-color;
+    }
+    &--berlin {
+      background-color: $berlin-color;
+    }
+    &--sanfrancisco {
+      background-color: $sanfrancisco-color;
+    }
+  }
+}

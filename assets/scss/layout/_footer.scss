@@ -1,0 +1,112 @@
+@use "../abstracts/" as *;
+
+#footer {
+  background-image: url(../../../assets/img/parallax-7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  .feed-back {
+    padding-top: 80px;
+    &__item {
+      align-self: flex-end;
+    }
+    &__sub-heading {
+      font-size: 1.4rem;
+      color: $txt-color;
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    &__heading {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: #555;
+      line-height: 3.6rem;
+    }
+    &__input {
+      outline: none;
+      background-color: #f9f9f9;
+      border-color: #f1f1f1;
+      border-radius: 30px;
+      border-style: solid;
+      border-width: 1px;
+      color: #a3a3a3;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+    }
+    &__btn {
+      margin-left: 8px;
+      background-color: #14b9d5;
+      color: $white-color;
+      padding: 12px 30px;
+    }
+  }
+  .footer__info {
+    position: relative;
+
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 45px;
+    background-color: $white-color;
+    .about-us {
+      padding-right: 40px;
+      .logo {
+        width: 160px;
+        height: 37px;
+        margin-bottom: 45px;
+      }
+      &__text {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        line-height: 2.7rem;
+        color: $txt-color;
+        margin-bottom: 25px;
+      }
+      .feed-back__socials {
+        img {
+          width: 22px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .footer__nav {
+    @include flex(null, space-between);
+    padding: 0 24px;
+    &-heading {
+      color: #555555;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+    &-list {
+      li {
+        font-size: 1.4rem;
+        color: $txt-color;
+        line-height: 2.7rem;
+        img {
+          margin-right: 8px;
+          width: 10px;
+        }
+      }
+    }
+  }
+  .footer__copy-right {
+    background-color: #14b9d5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    transform: translateY(100%);
+    display: inline-flex;
+    justify-content: space-between;
+    span {
+      color: $white-color;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+    }
+  }
+}

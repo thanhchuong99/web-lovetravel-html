@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+.banner {
+  margin-bottom: 75px;
+  margin-top: 60px;
+  background-image: url(../../../assets/img/parallax-search-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner {
+    @include flex(center, center);
+    padding-top: calc(235px / 2);
+    padding-bottom: calc(235px / 2);
+  }
+  &__heading {
+    font-size: 4.5rem;
+    color: $white-color;
+    margin-right: 138px;
+    line-height: 4.5rem;
+    span {
+      z-index: 1;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        border-top: 5px solid #f76570;
+        z-index: -1;
+      }
+    }
+  }
+  &__btn {
+    color: #f76570;
+  }
+}

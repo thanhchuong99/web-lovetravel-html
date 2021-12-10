@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+.btn {
+  border-radius: 30px;
+  font-size: 1.4rem;
+  border: 0;
+  letter-spacing: 1px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn--m {
+  padding: 12px 15px 10px;
+}
+.btn--l {
+  padding: 8px 16px;
+}
+.btn--xl {
+  padding: 15px 54px;
+}
+.btn-slide {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 3px;
+  background-color: $white-color;
+  opacity: 0.5;
+  margin-right: 18px;
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
